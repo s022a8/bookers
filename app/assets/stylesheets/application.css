@@ -30,6 +30,7 @@ body {
 /* root-page */
 h1 {
 	font-size: 2em;
+	margin: 20px 0;
 }
 
 .root-p {
@@ -40,6 +41,51 @@ h1 {
 .root-p > a {
 	color: #666;
 }
+
+/* index-page */
+#list {
+	margin: 0 0 20px 5px;
+}
+
+.title {
+	padding: 0 80px 10px;
+}
+
+.body {
+	padding: 0 180px 10px;
+}
+
+tbody > .title, tbody > .body {
+	text-align: left;
+}
+
+#form {
+	margin: 0 0 0 5px;
+}
+
+#form > h2 {
+	padding-bottom: 15px;
+}
+
+.field {
+	margin-bottom: 10px;
+}
+
+input[type="submit"] {
+	display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
