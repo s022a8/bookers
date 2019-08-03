@@ -1,31 +1,33 @@
+<% flash.each do |message_type, message| %>
+		<h4 class="message"><%= message %></h4>
+<% end %>
+
 <h1>Books</h1>
 
 <div id="list">
 	<table>
 		<thead>
-			<th class="title">Title</th>
-			<th class="body">Body</th>
+			<tr>
+				<th class="title">Title</th>
+				<th class="body">Body</th>
+			</tr>
 		</thead>
 		<tbody>
 			<% @books.each do |book| %>
-				<th class="title"><%= book.title %></th>
-				<th class="body"><%= book.body %></th>
-				<th>
-					<ul>
-						<li><%= link_to 'Show', book_path(book) %></li>
-						<li><%= link_to 'Edit', edit_book_path(book) %></li>
-						<li>
-							<%= link_to 'Delete', book_path(book), method: :delete,
-							"data-confirmation" => "本当に削除してもよろしいですか？" %>
-						</li>
-					</ul>
-				</th>
+				<tr>
+					<td><%= book.title %></td>
+					<td><%= book.body %></td>
+					<td class="link"><%= link_to 'Show', book_path(book) %></td>
+					<td class="link"><%= link_to 'Edit', edit_book_path(book) %></td>
+					<td class="link"><%= link_to 'Delete', book_path(book), method: :delete,
+						"data-confirm" => "本当に削除しますか？" %></td>
+				</tr>
 			<% end %>
 		</tbody>
 	</table>
 </div>
 
-<section id="form">
+<section class="form">
 	<h2>New book</h2>
 
 	<%= form_for(@book) do |f| %>

@@ -27,6 +27,10 @@ body {
 	line-height: 18px;
 }
 
+a {
+	color: #666;
+}
+
 /* root-page */
 h1 {
 	font-size: 2em;
@@ -38,32 +42,24 @@ h1 {
 	font-size: 13px;
 }
 
-.root-p > a {
-	color: #666;
-}
-
 /* index-page */
 #list {
 	margin: 0 0 20px 5px;
 }
 
 .title {
-	padding: 0 80px 10px;
+	padding: 0 75px 8px;
 }
 
 .body {
-	padding: 0 180px 10px;
+	padding: 0 185px 8px;
 }
 
-tbody > .title, tbody > .body {
-	text-align: left;
+td {
+	padding: 1px 5px 7px;
 }
 
-#form {
-	margin: 0 0 0 5px;
-}
-
-#form > h2 {
+.form > h2 {
 	padding-bottom: 15px;
 }
 
@@ -71,8 +67,26 @@ tbody > .title, tbody > .body {
 	margin-bottom: 10px;
 }
 
+.field > input, .field > textarea {
+	padding: 2px;
+}
+
 input[type="submit"] {
-	display: block;
+	display: inline-block;
+	margin-bottom: 10px;
+	padding: 1px 7px 0;
+	text-align: center;
+}
+
+/* show-page */
+.detail {
+	margin: 0 0 35px 35px;
+}
+
+.message {
+	margin: 15px 0 30px 35px;
+	color: #097;
+	letter-spacing: 0.05em;
 }
 
 
